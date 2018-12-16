@@ -15,6 +15,7 @@ module.exports = {
             }
             else if(body.status === 'OK'){
                 var geocodeObj = {
+                    address: body.results[0].formatted_address,
                     latitude: body.results[0].geometry.location.lat,
                     longitude: body.results[0].geometry.location.lng
                 }
